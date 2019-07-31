@@ -1,13 +1,13 @@
 {
-  "name": "electron-metamask-boilerplate",
-  "productName": "Electron Metamask Boilerplate",
+  "name": "DecShare",
+  "productName": "Decshare",
   "version": "0.0.1",
-  "description": "Easily create a desktop version of your dApp using Electron (Muon) + MetaMask.",
+  "description": "",
   "main": "main.js",
   "license": "Apache-2.0",
   "author": {
-    "name": "Swapy Network",
-    "email": "contact@swapy.network"
+    "name": "",
+    "email": ""
   },
   "keywords": [
     "muon",

@@ -12,6 +12,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "web3": "^0.20.4"
+    "ipfs-api": "^26.1.2",
+    "web3": "^0.20.7"
   }
 }

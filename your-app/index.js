@@ -1,4 +1,5 @@
-if (typeof window.web3 !== 'undefined') {
+
+if (typeof window.web3 != 'undefined') {
   window.web3 = new Web3(window.web3.currentProvider);
 } else {
   // Other provider
@@ -9,6 +10,7 @@ function isElectron() {
   if(chrome.ipcRenderer) return true;
   return false;
 }
+
 
 function sendToElectron(message) {
   chrome.ipcRenderer.send(message);
@@ -31,7 +33,7 @@ function closeMetamaskNotification() {
 }
 
 function sendEther(contractFunction) {
-  web3.eth.sendTransaction({
+  window.web3.eth.sendTransaction({
     to: '0x8f6c0c887F7CAF7D512C964eA2a3e668D94C5304',
     value: '1000000000000'
   }, (err, res) => {

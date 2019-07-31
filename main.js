@@ -2,7 +2,6 @@ const { app, BrowserWindow, shell, session, Menu, ipcMain } = require('electron'
 const path = require('path');
 const url = require('url');
 const fs = require('fs');
-
 const extensions = require('./extensions');
 
 let isDev;
@@ -20,14 +19,14 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1920,
-    height: 1080
+    width: 920,
+    height: 780
   });
 
   extensions.loadMetamask(session, win, isDev);
 
   let indexPath;
-  isDev ? indexPath = path.join(`brave/${__dirname}`, 'your-app/index.html') : indexPath = path.join(`brave/${__dirname}`, 'index.html');
+  isDev ? indexPath = path.join(`brave/${__dirname}`, 'dc/index.html') : indexPath = path.join(`brave/${__dirname}`, 'index.html');
 
   setTimeout(() => {
     win.loadURL(url.format({
@@ -47,7 +46,6 @@ function createWindow() {
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
     win.maximize();
   }, 200);
-
   win.webContents.openDevTools();
   if(isDev) {
   }
